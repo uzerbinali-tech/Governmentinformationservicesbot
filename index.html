@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nagrik Sahayak | Government Information Desk</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="letterhead">
+    <div class="letterhead-inner">
+      <div class="seal" aria-hidden="true">
+        <svg viewBox="0 0 100 100" width="46" height="46">
+          <circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" stroke-width="2.5"/>
+          <circle cx="50" cy="50" r="37" fill="none" stroke="currentColor" stroke-width="1.2"/>
+          <path d="M50 20 L58 42 L82 42 L62 56 L70 78 L50 64 L30 78 L38 56 L18 42 L42 42 Z" fill="currentColor"/>
+        </svg>
+      </div>
+      <div class="letterhead-text">
+        <p class="eyebrow">Public Information Bureau &middot; Est. Digital Desk</p>
+        <h1>Nagrik Sahayak</h1>
+        <p class="tagline">Citizen Information &amp; Service Assistance Window</p>
+      </div>
+      <div class="office-status">
+        <span class="dot"></span>
+        <div>
+          <p class="status-label">Desk Status</p>
+          <p class="status-value" id="deskStatus">Open &middot; Serving Queries</p>
+        </div>
+      </div>
+    </div>
+    <div class="letterhead-rule"></div>
+  </header>
+
+  <main class="floor">
+
+    <aside class="directory" aria-label="Service categories">
+      <p class="directory-title">Service Directory</p>
+      <ul id="directoryList"></ul>
+      <div class="directory-footer">
+        <p>No file for your query?</p>
+        <p class="directory-footer-sub">Ask the assistant in the counter window &rarr;</p>
+      </div>
+    </aside>
+
+    <section class="counter" aria-label="Assistance chat window">
+      <div class="counter-window" id="counterWindow" role="log" aria-live="polite"></div>
+
+      <form class="counter-form" id="counterForm" autocomplete="off">
+        <span class="form-label-mark">Query&nbsp;Slip</span>
+        <input
+          type="text"
+          id="queryInput"
+          placeholder="Type your question — e.g. how to apply for a birth certificate"
+          aria-label="Type your question"
+        />
+        <button type="submit">Submit Slip</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="disclaimer">
+    <p>This is a student demonstration project. Information shown is illustrative and general in nature — always confirm procedures, fees, and documents with your local government office or its official website before acting.</p>
+  </footer>
+
+  <script src="knowledge.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
